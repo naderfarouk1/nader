@@ -66,25 +66,5 @@ Since those are credentials, prefer setting them as a personal override
 (`claude mcp add n8n-mcp --scope local ...`, or editing your own
 `~/.claude.json`) rather than committing them into this shared `.mcp.json`.
 See the [Claude Code setup guide](https://github.com/czlonkowski/n8n-mcp/blob/main/docs/CLAUDE_CODE_SETUP.md)
-for details and scopes.
-
-## n8n-skills
-
-This repository also includes the 13 expert skills from
-[czlonkowski/n8n-skills](https://github.com/czlonkowski/n8n-skills) (MIT
-License, with portions adapted from
-[n8n-io/skills](https://github.com/n8n-io/skills) under Apache License 2.0 —
-see `.claude/skills/n8n-skills-NOTICES`), installed as project-scoped skills
-under `.claude/skills/`. They teach Claude n8n-mcp tool usage, expression
-syntax, node configuration, workflow patterns, error handling, Code-node
-JavaScript/Python, AI agents, subworkflows, multi-instance accounts, and
-self-hosting — and work together with the n8n-MCP server configured above.
-
-`using-n8n-mcp-skills` is the entry-point router; it names the right
-specialist skill for whatever n8n task is at hand. The upstream repo also
-ships a Claude Code plugin with enforcement hooks (`PreToolUse`/`PostToolUse`
-reminders on high-risk n8n-mcp tool calls); those are only active via a full
-`/plugin install` and are **not** included in this skills-only, manually
-copied install — see the
-[installation guide](https://github.com/czlonkowski/n8n-skills/blob/main/docs/INSTALLATION.md)
-if you want the plugin install instead.
+for details, scopes, and the optional companion
+[n8n-skills](https://github.com/czlonkowski/n8n-skills) workflow-authoring skills.
